@@ -1,11 +1,8 @@
 steps:
- # build the container image
 - name: "gcr.io/cloud-builders/docker"
- args: ["build", "gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world:latest", "."]
- # push container image
+ args: ["build","-t","gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world-demo:latest", "."]
 - name: "gcr.io/cloud-builders/docker"
-args: ["push", "gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world:latest"]
- # deploy container image to GKE
+args: ["push", "gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world-demo:latest"]
 - name: "gcr.io/cloud-builders/gke-deploy"
  args:
  - run
