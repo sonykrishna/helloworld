@@ -1,7 +1,7 @@
 steps:
  # build the container image
 - name: "gcr.io/cloud-builders/docker"
- args: ["build", "-t", "gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world:latest", "."]
+ args: ["build", "gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world:latest", "."]
  # push container image
 - name: "gcr.io/cloud-builders/docker"
 args: ["push", "gcr.io/sylvan-epoch-335312/github.com/sonykrishna/hello-world:latest"]
